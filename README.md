@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `mesto` (
 
 Použité třetí strany v aplikaci
 
-na Javascript není využíváno npm, není třeba využívat pro běh aplikace.
+na Javascript není využíváno npm, není třeba pro běh aplikace.
 Javascript je zaveden ručne.
 
 Nejdůležitější JS rozšíření pro aplikaci je Naja , která zajišťuje psaní AJAXových scriptů a komunikaci v Nette.
