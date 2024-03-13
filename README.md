@@ -2,7 +2,7 @@ CRM pro BPR se snažím co mě čas dovolí, stavět co nejvíce odděleně, ale
 
 Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/)
 
-Soubory kódů co jsem nahrál obsahují ukázku modelu, presenteru, tak i šablonovacího souboru latte a composer.json.
+Soubory kódů co jsem nahrál obsahují ukázku modelu, presenteru, tak i šablonovacího souboru latte a composer.json. Pro člověka, který nezná Nette tak soubor index.php, který spouští aplikaci, ale rozhodně pro pochopení je znalost Nette nebo Laravel celkem podstatné.
 
 Aplikace CRM je rozdělana do presentů podle divizí ( TravelPresenter.php apod. ), stejně tak jsou rozděleny modely ( TravelModel.php ) a samozřejmě templates jsou ve stejné logice.
 
