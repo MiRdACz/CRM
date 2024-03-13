@@ -29,7 +29,7 @@ Javascript je zaveden ručne.
 
 Nejdůležitější JS rozšíření pro aplikaci je [Naja](https://naja.js.org/#/) , která zajišťuje psaní AJAXových scriptů a komunikaci v Nette.
 
-Editor pro editaci zajišťuje JS tinymce
+Editor pro editaci zajišťuje JS [tinymce](https://www.tiny.cloud/)
 
 Pro frontend je zde rozšíření lozad, do budoucna se s největší pravděpodobností odstraní.
 Bootstrap pro css
