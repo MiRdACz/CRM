@@ -1,4 +1,4 @@
-CRM se snažím co mě volná chvilka dovolí stavět co nejvíce odděleně, ale i tak je to málo :)
+CRM se snažím co mě volná chvilka dovolí, stavět co nejvíce odděleně, ale i tak je to málo :)
 Aplikace CRM je rozdělana do presentů podle divizí ( TravelPresenter.php apod. ), stejně tak jsou rozděleny modely ( TravelModel.php ) a samozřejmě templates jsou ve stejné logice.
 
 Popis architektura MVC
@@ -8,5 +8,16 @@ Popis architektura MVC
 
 Databáze
 
+Použité třetí strany v aplikaci
+
+Javascriptové rozšíření. Na Javascript není využíváno npm, není třeba využívat pro běh aplikace.
+Javascript je zaveden ručne.
+
+Nejdůležitější JS rozšíření pro aplikaci je Naja , která zajišťuje psaní AJAXových scriptů a komunikaci v Nette.
+
+Editor pro editaci zajišťuje JS tinymce
+
+Pro frontend je zde rozšíření lozad, do budoucna se s největší pravděpodobností odstraní.
+Bootstrap pro css
 
 
