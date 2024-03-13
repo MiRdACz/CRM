@@ -28,7 +28,6 @@ class RouterFactory
         $router->addRoute('[<url>]', 'Homepage:default');
         $router->addRoute('web/prihlaseni', 'Homepage:sign');
 
-
-		return $router;
+	return $router;
 	}
 }
