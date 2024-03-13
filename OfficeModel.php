@@ -19,7 +19,7 @@ class OfficeModel
     }
 
 
-    public function vykaz($values)
+    public function insertVykaz($values)
     {
          $this->database->beginTransaction();
             try {
@@ -59,14 +59,14 @@ class OfficeModel
         foreach($vykaz['cas'] as $index => $value) {
             if($index == 0){ continue;}
             else{
-            list($hour, $minute) = explode(':', $value);
+            list($hodiny, $minuty) = explode(':', $value);
 
-            $hour = (int) $hour;
-            $minute = (int) $minute;
-            if($hour == null){
-                $vykaz['cas_celkem'][$index] = $minute;
+            $hodiny = (int) $hodiny;
+            $minuty = (int) $minuty;
+            if($hodiny == null){
+                $vykaz['cas_celkem'][$index] = $minuty;
             }else{
-                $vykaz['cas_celkem'][$index] = ( $hour * 60 ) + $minute;
+                $vykaz['cas_celkem'][$index] = ( $hodiny * 60 ) + $minuty;
             }
 
             }
