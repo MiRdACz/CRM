@@ -4,9 +4,6 @@ namespace App\Router;
 use Nette;
 use Nette\Application\Routers\RouteList;
 use Nette\Application\Routers\Route;
-use Nette\Utils\Strings;
-use Nette\Utils\Arrays;
-use Nette\Utils\Validators;
 
 class RouterFactory
 {
@@ -14,11 +11,11 @@ class RouterFactory
     public static function createRouter(): RouteList
 	{
         $router = new RouteList;
-	$router->addRoute('glamping-mapa','Homepage:glampingMapa');
-        $router->addRoute('admin/<action>','Admin:default');
-        $router->addRoute('user/<action>[/<id>]','User:default');
+	$router->addRoute('glamping-mapa','Homepage:glampingMapa');        
         $router->addRoute('web/odhlaseni', 'Homepage:out');                
         $router->addRoute('web/obnova-hesla', 'Homepage:lostpassword');
+	$router->addRoute('admin/<action>','Admin:default');
+        $router->addRoute('user/<action>[/<id>]','User:default');
 
         $router->addRoute('travel/<action>','Travel:default');
 	$router->addRoute('glamp/<action>','Glamp:default');
