@@ -1,6 +1,5 @@
 <?php
 namespace App\Model;
-
 use Nette;
 use Nette\Database\Table\Selection;
 use Nette\Utils\FileSystem;
