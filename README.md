@@ -1,4 +1,4 @@
-CRM se snažím co mě volná chvilka dovolí, stavět co nejvíce odděleně, ale i tak je to málo :)
+CRM pro BPR se snažím co mě čas dovolí, stavět co nejvíce odděleně, ale i tak je to málo :)
 Aplikace CRM je rozdělana do presentů podle divizí ( TravelPresenter.php apod. ), stejně tak jsou rozděleny modely ( TravelModel.php ) a samozřejmě templates jsou ve stejné logice.
 
 Popis architektura MVC
@@ -7,6 +7,16 @@ Popis architektura MVC
 ![image](https://github.com/MiRdACz/CRM/assets/9698726/1d478cda-4fad-442f-a126-24aa7e525bff)
 
 Databáze
+Ukázka jak tvořím db vše říkající ukázka tvorby db
+
+CREATE TABLE IF NOT EXISTS `mesto` (
+  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nazev` varchar(255) COLLATE utf8mb3_czech_ci NOT NULL,
+  `zeme_id` int UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `zeme_id` (`zeme_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=558 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_czech_ci;
+
 
 Použité třetí strany v aplikaci
 
