@@ -75,6 +75,9 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $this->template->logo = $logoFooter;
         /** pages */
         $this->template->page = $page;
+	$this->template->pageTitle = $page[0]['title'];
+        $this->template->pageDescription = $page[0]['description'];
+        $this->template->pageKw = $page[0]['kw'];
     }
     public function menuFooterLogo()
     {
