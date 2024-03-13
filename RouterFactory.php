@@ -11,9 +11,11 @@ class RouterFactory
     public static function createRouter(): RouteList
 	{
         $router = new RouteList;
-	$router->addRoute('glamping-mapa','Homepage:glampingMapa');        
+	$router->addRoute('glamping-mapa','Homepage:glampingMapa');
+	$router->addRoute('web/prihlaseni', 'Homepage:sign');
         $router->addRoute('web/odhlaseni', 'Homepage:out');                
         $router->addRoute('web/obnova-hesla', 'Homepage:lostpassword');
+	$router->addRoute('bprUser', 'Homepage:bprUser');
 	$router->addRoute('admin/<action>','Admin:default');
         $router->addRoute('user/<action>[/<id>]','User:default');
 
@@ -23,10 +25,8 @@ class RouterFactory
         $router->addRoute('marketing/<action>','Marketing:default');
         $router->addRoute('office/<action>','Office:default');
         $router->addRoute('grafika/<action>','Grafika:default');
-        
-        $router->addRoute('bprUser', 'Homepage:bprUser');
-        $router->addRoute('[<url>]', 'Homepage:default');
-        $router->addRoute('web/prihlaseni', 'Homepage:sign');
+                
+        $router->addRoute('[<url>]', 'Homepage:default');        
 
 	return $router;
 	}
