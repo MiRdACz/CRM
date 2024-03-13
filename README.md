@@ -27,7 +27,7 @@ Použité třetí strany v aplikaci
 na Javascript není využíváno npm, nepotřebuji pro běh aplikace.
 Javascript je zaveden ručne.
 
-Nejdůležitější JS rozšíření pro aplikaci je Naja , která zajišťuje psaní AJAXových scriptů a komunikaci v Nette.
+Nejdůležitější JS rozšíření pro aplikaci je [Naja](https://naja.js.org/#/) , která zajišťuje psaní AJAXových scriptů a komunikaci v Nette.
 
 Editor pro editaci zajišťuje JS tinymce
 
