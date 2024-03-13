@@ -68,7 +68,6 @@
 </div>
     {$footer_content|noescape}
     <script n:nonce>
-
     var firma= document.getElementsByName("firma")[0];
     var kategorie= document.getElementsByName("categorie")[0];
     firma.addEventListener("change", myScript);
@@ -76,7 +75,6 @@
     function myScript() {
       this.form.submit();
     }
-
     document.getElementById("search").addEventListener("input", whisperer);
          function whisperer(){ var input = document.getElementById("search").value; naja.makeRequest('GET', {link whispererKlient!}, { value: input }); }
     </script>
