@@ -1,0 +1,83 @@
+{block title}{$pageTitle}{/block}
+{block description}{$pageDescription}{/block}
+{block kw}{$pageKw}{/block}
+{block content}
+<div class="fullHeight">
+<a href="#top" class="link-dark" aria-label="odkaz nahoru" title="nahoru"><div class="d-none btn btn-outline-primary px-2 vivify fadeInBottom" id="go-top"><span class="fas fa-chevron-up fa-2x"></span></div></a>
+<div class="container">
+{form filtrKlient}
+<div class="row">
+    <div class="col-12 col-md-6">
+    <input type="text" class="form-control form-control-sm my-2" id="search" placeholder="Našeptávač podle příjmení nebo celé jméno"/>
+                <div n:snippet="whispererKlient">
+                    {ifset $whispererKlient}
+                    {if $whispererKlient}
+                    {foreach $whispererKlient as $n}
+                    <a n:href="Travel:klientiDetail $n['id']" class="nase fs-6 list-group-item list-group-item-action">ID {$n['id']} - {$n['jmeno'].' '. $n['prijmeni'].' - '.$n['nazev']|upper} ID {$n['firma_id']}</a>
+                    {/foreach}
+                    {/if}
+                    {/ifset}
+                </div>
+    </div>
+    <div class="col-12 col-md-3">
+    <select class="form-control form-select form-select-sm my-2" name="categorie" id="frm-form-categorie">
+            <option value="test">Kategorie není vybrána</option>
+            {foreach $form[categorie]->items as $key => $value}
+                <option value="{$key}" {if $category == $key} selected{/if}>{$value}</option>
+            {/foreach}
+    </select>
+    </div>
+    <div class="col-12 col-md-3">
+    <select class="form-control form-select form-select-sm my-2" name="firma" id="frm-form-firma">
+            <option value="test">Firma není vybrána</option>
+            {foreach $form[firma]->items as $key => $value}
+                <option value="{$key}" {if $firma == $key} selected{/if}>{$value}</option>
+            {/foreach}
+    </select>
+    </div>
+</div>
+{/form}
+{cache [$firma,$category], expire: '20 days'}
+    <div class="row">
+
+          <div class="col-12 col-md-6 col-lg-3 py-3" n:foreach="$klienti as $klient">
+            <div class="card shadow h-100 text-dark bg-white">
+            <div class="card-header h-100">
+            <h4 class="pt-2">{$klient->jmeno} {$klient->prijmeni}</h4>
+            </div>
+              <div class="card-body">
+                <h5 class="card-title">{$klient->firma->nazev}</h5>
+                {if count($klient->related('category_user_crm')) === 0}<h5 class="card-title badge bg-none"><br></h5>{else}
+                <h5 class="badge bg-success" n:foreach="$klient->related('category_user_crm') as $i">
+                    {$i->ref('category_crm','category_id')->nazev}
+                </h5>
+                {/if}
+                <p class="card-text">{if !$klient->email}<br>{else}<span class="far fa-envelope fa-fw"></span> <a href="mailto:{$klient->email}">{$klient->email}</a>{/if}</p>
+                <p class="card-text">{if !$klient->telefon}<br>{else}<span class="fas fa-phone-alt fa-fw"></span> <a href="tel:{$klient->telefon}">{$klient->telefon}</a>{/if}</p>
+                <p class="card-text">{if !$klient->telefon2}<br>{else}<span class="fas fa-phone-alt fa-fw"></span> <a href="tel:{$klient->telefon2}">{$klient->telefon2}</a>{/if}</p>
+
+                <a n:href="Travel:klientiDetail $klient->id" class="mt-2 btn btn-outline-primary shadow mb-3 rounded">Detail klienta <span class="ms-2 fas fa-arrow-circle-right fa-fw"></span></a>
+                
+              </div>
+            </div>
+          </div>
+
+    </div>
+{/cache}
+</div>
+</div>
+    {$footer_content|noescape}
+    <script n:nonce>
+
+    var firma= document.getElementsByName("firma")[0];
+    var kategorie= document.getElementsByName("categorie")[0];
+    firma.addEventListener("change", myScript);
+    kategorie.addEventListener("change", myScript);
+    function myScript() {
+      this.form.submit();
+    }
+
+    document.getElementById("search").addEventListener("input", whisperer);
+         function whisperer(){ var input = document.getElementById("search").value; naja.makeRequest('GET', {link whispererKlient!}, { value: input }); }
+    </script>
+{/block}
