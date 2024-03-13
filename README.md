@@ -9,11 +9,11 @@ Popis architektura MVC
 Databáze, vše říkající ukázka tvorby db
 
 CREATE TABLE IF NOT EXISTS `mesto` (
-  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `nazev` varchar(255) COLLATE utf8mb3_czech_ci NOT NULL,
-  `zeme_id` int UNSIGNED NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `zeme_id` (`zeme_id`)
+ `id` int UNSIGNED NOT NULL AUTO_INCREMENT,  
+ `nazev` varchar(255) COLLATE utf8mb3_czech_ci NOT NULL,  
+ `zeme_id` int UNSIGNED NOT NULL,  
+ PRIMARY KEY (`id`),  
+ KEY `zeme_id` (`zeme_id`)  
 ) ENGINE=InnoDB AUTO_INCREMENT=558 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_czech_ci;
 
 
