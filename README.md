@@ -1,6 +1,6 @@
 CRM pro BPR se snažím co mě čas dovolí (primární práce není programování), stavět co nejvíce odděleně (db nejlépe pro každou divizy zvlášť), ale i tak je to málo :) motivovat kolegy (zatím pracuji na app sám) a ano je v kódu použit český jazyk (jestli bude kolega, stojí za přepsání). V průběhu času nahraji komplet app i když bude pořád v testovací a vývojové fázy (app potřebuje alespoň minimální péči).
 
-Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/), app má jeden placený zdroj a to API mapy Google.
+Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/), má jeden placený zdroj a to API mapy Google.
 
 Soubory kódů, co jsem nahrál obsahují ukázku routru, modelu, formulářů, presenteru, tak i šablonovacího souboru latte a composer.json, pro člověka, který nezná Nette, tak soubor index.php a Bootstrap.php, který spouští aplikaci, ale rozhodně pro pochopení je znalost Nette nebo Laravel celkem podstatná.
 
