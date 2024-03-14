@@ -40,7 +40,7 @@ Nejdůležitější JS rozšíření pro aplikaci je [Naja](https://naja.js.org/
 
 Editor pro editaci zajišťuje JS [tinymce](https://www.tiny.cloud/)
 
-Pro frontend je zde rozšíření lozad, do budoucna se s největší pravděpodobností odstraní.
+Pro frontend je zde rozšíření lozad, do budoucna se s největší pravděpodobností odstraním.
 [Bootstrap](https://getbootstrap.com/)https://getbootstrap.com/ pro css
 
 
