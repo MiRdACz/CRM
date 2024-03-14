@@ -41,7 +41,7 @@ class OfficeModel
     public function getVykaz(int $user_id)
     {
         return $this->database->table('vykaz_prace')->where('user_id',$user_id)->order('datum_vykazu ASC');
-
+        //nebo poslat jako pole vykazDb
         $vykaz['den'][]='';
         $vykaz['cas'][]='';
         $vykaz['cas_celkem'][]=0;
