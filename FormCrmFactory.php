@@ -25,16 +25,16 @@ class FormCrmFactory
 
     public function mestoSluzby(): Form
     {
-            $factory = new Nette\Http\RequestFactory;
-            $httpRequest = $factory->fromGlobals();
-            $zeme = intval($httpRequest->getQuery('zeme'));
+        $factory = new Nette\Http\RequestFactory;
+        $httpRequest = $factory->fromGlobals();
+        $zeme = intval($httpRequest->getQuery('zeme'));
         $form = new Form;
         $form->addProtection('Vypršel časový limit, odešlete formulář znovu');
         $category =[];
-                $category += [0 => 'Země není vybrána'];
-                foreach ($this->travelModel->selectKategorie() as $index => $cat) {
-                    $category += [$index => $cat];
-                }
+             $category += [0 => 'Země není vybrána'];
+             foreach ($this->travelModel->selectKategorie() as $index => $cat) {
+                 $category += [$index => $cat];
+             }
         $form->addSelect('categorie', 'Kategorie:',$category )
             ->setHtmlAttribute('class', 'form-select');
         $form->addSelect('mesto_id', 'Město:', $this->travelModel->selectMesto($zeme))
@@ -63,11 +63,9 @@ class FormCrmFactory
 		  ->setHtmlAttribute('class', 'form-select')
           ->setPrompt('Vyberte stát');
 
-
         $form->addSubmit('send', 'Hledat');
 
         $form->onSuccess[] = function (UI\Form $form, \stdClass $values) {
-
         };
         return $form;
     }
@@ -91,8 +89,8 @@ class FormCrmFactory
         foreach ($firmaData as $fir) {
             $firma += [$fir['id'] => $fir['nazev']];
         }		
-		$form->addSelect('datum', 'Rok:', $datum)
-		  ->setHtmlAttribute('class', 'form-select form-select-sm form-select my-2')
+	$form->addSelect('datum', 'Rok:', $datum)
+	  ->setHtmlAttribute('class', 'form-select form-select-sm form-select my-2')
           ->setPrompt('Vyberte rok');
 		$form->addSelect('country', 'Stát:', $this->travelModel->selectZeme())
 		  ->setHtmlAttribute('class', 'form-select form-select-sm')
@@ -103,22 +101,20 @@ class FormCrmFactory
             ->setHtmlAttribute('class', 'form-select form-select-sm')->setPrompt('všechny');
         $form->addSubmit('send', 'hledat');
         $form->onSuccess[] = function (UI\Form $form, \stdClass $values) {
-
         };
         return $form;
     }
 	public function akceMesto(): Form
 	{
-		$factory = new Nette\Http\RequestFactory;
+	$factory = new Nette\Http\RequestFactory;
         $httpRequest = $factory->fromGlobals();
         $zeme = intval($httpRequest->getQuery('zeme'));
-		$form = new Form;
+	$form = new Form;
         $form->addProtection('Vypršel časový limit, odešlete formulář znovu');
 		$form->addSelect('mesto_id', 'Město:', $this->travelModel->selectMesto($zeme))
             ->setHtmlAttribute('class', 'form-select form-select-sm')->setPrompt('Vyberte si');
 		$form->addSubmit('send', 'hledat');
         $form->onSuccess[] = function (UI\Form $form, \stdClass $values) {
-
         };
         return $form;	
 	}
@@ -143,20 +139,18 @@ class FormCrmFactory
             ->setHtmlAttribute('class', 'form-select')->setPrompt('všechny');
         $form->addSubmit('send', 'Registrovat');
         $form->onSuccess[] = function (UI\Form $form, \stdClass $values) {
-
         };
         return $form;
     }
 
     public function kategoryKlient(/* parametry */): Form
 	{
-		$form = new Form;
+	$form = new Form;
         $form->addProtection('Vypršel časový limit, odešlete formulář znovu');
         $form->addText('nazev', 'Název:')->setHtmlAttribute('class', 'form-control')->setRequired('Zadejte prosím mázev');
         $form->addSubmit('send', 'Uložit')->setHtmlAttribute('class', 'btn btn-success mt-3');
-		$form->onSuccess[] = [$this, 'processForm'];
-
-		return $form;
+	$form->onSuccess[] = [$this, 'processForm'];
+	return $form;
 	}
 
     public function processForm(Form $form, array $values): void
@@ -424,7 +418,7 @@ class FormCrmFactory
 	// Destinace mesto
 	public function pridatDestinaceMesto(): Form
     {
-		$factory = new Nette\Http\RequestFactory;
+	$factory = new Nette\Http\RequestFactory;
         $httpRequest = $factory->fromGlobals();        
         $idStat = intval($httpRequest->getQuery('idStat'));
 			
@@ -472,7 +466,7 @@ class FormCrmFactory
     }
 	public function pridatMista(): Form
 	{
-		$form = new Form;
+	$form = new Form;
         $form->addProtection('Vypršel časový limit, odešlete formulář znovu');
         $form->addSelect('category_id', 'Kategorie:', $this->travelModel->selectMistaKategorie())
 		  ->setHtmlAttribute('class', 'form-select form-select-sm')
@@ -615,7 +609,6 @@ class FormCrmFactory
         $form->addSubmit('send', 'Hledat');
 
         $form->onSuccess[] = function (UI\Form $form, \stdClass $values) {
-
         };
         return $form;
     }
@@ -632,7 +625,7 @@ class FormCrmFactory
         $form->addSelect('categorie', 'Kategorie:',$category )
             ->setHtmlAttribute('class', 'form-select');
 		
-		$form->addHidden('house');	
+	$form->addHidden('house');	
 
         $form->addSelect('country', 'Stát:', $this->travelModel->selectZeme())
             ->setHtmlAttribute('class', 'form-select')
@@ -642,7 +635,6 @@ class FormCrmFactory
         $form->addSubmit('send', 'Hledat');
 
         $form->onSuccess[] = function (UI\Form $form, \stdClass $values) {
-
         };
         return $form;
     }
