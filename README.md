@@ -11,7 +11,16 @@ Popis architektura MVC
 ![image](https://github.com/MiRdACz/CRM/assets/9698726/42a25108-b7d0-45aa-bf34-9e2afb3178cf)
 ![image](https://github.com/MiRdACz/CRM/assets/9698726/1d478cda-4fad-442f-a126-24aa7e525bff)
 
-Databáze, všeříkající ukázka tvorby db
+Databáze, všeříkající ukázka tvorby tabulek pro zeme a mesto (lepší by bylo mesta - držet plurál)
+
+CREATE TABLE IF NOT EXISTS `zeme` (
+  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nazev` varchar(255) COLLATE utf8mb3_czech_ci NOT NULL,
+  `latitude` varchar(255) COLLATE utf8mb3_czech_ci DEFAULT NULL,
+  `longitude` varchar(255) COLLATE utf8mb3_czech_ci DEFAULT NULL,
+  `zoom` varchar(255) COLLATE utf8mb3_czech_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_czech_ci;
 
 CREATE TABLE IF NOT EXISTS `mesto` (
  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,  
