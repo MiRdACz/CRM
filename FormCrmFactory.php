@@ -143,7 +143,7 @@ class FormCrmFactory
         return $form;
     }
 
-    public function kategoryKlient(/* parametry */): Form
+    public function kategoryKlient(): Form
 	{
 	$form = new Form;
         $form->addProtection('Vypršel časový limit, odešlete formulář znovu');
@@ -168,13 +168,13 @@ class FormCrmFactory
             }
 
         } catch (AnyModelException $e) {
-            $form->addError('...');
+            $form->addError('chyba');
         }
     }
 
     // pridani klienta
 
-    public function AddKlient(): Form
+    public function pridatKlient(): Form
 	{
         $form = new Form;
         $form->addProtection('Vypršel časový limit, odešlete formulář znovu');
