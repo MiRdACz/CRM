@@ -14,7 +14,6 @@ use Nette\Utils\DateTime;
 use Nette\Utils\Image;
 use App\Services\FactoryFilterMonth;
 use App\Services\FactoryFilterSnippetContent;
-use App\Services\FactoryShortCode;
 use App\Services\FormLogin;
 use App\Model\PageModel;
 use App\Model\ArticleModel;
