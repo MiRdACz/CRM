@@ -108,23 +108,40 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 	}
     }    
     /** aktivace */
-    public function renderActive(){
-
-        /** z bezpecnostnich důvodů neuvádím */
-        
+    public function renderActive(){     
+        $email = $this->getParameter('email');
+        $active_key = $this->getParameter('key');
+        if(!$email || !$active_key){
+            $this->redirect('Homepage:default');exit;
+        }
+        $checkActive = $this->pageModel->check($email,$active_key);
+        if($checkActive){
+            $this->pageModel->checkTrue($email,$active_key,$checkActive['id']);
+            $this->flashMessage("Váš účet je aktivován!", 'alert-success');
+            $this->redirect('sign');exit;
+        }
+        else{
+            $this->flashMessage("Chyba! Kontaktujte administrátora", 'warning-success');
+            $this->redirect('Homepage:default');exit;
+        }
     }
     /** registrace */
     public function renderRegistration()
     {
         $this::menuFooterLogo();
         $httpRequest = $this->getHttpRequest();
-       /** z bezpecnostnich důvodů neuvádím */
+        $ip = $httpRequest->getRemoteAddress();
+        $this->template->block = $this->articleModel->block($ip);
+	$this->template->ip = $ip;
     }
     /** Prihlaseni */
     public function renderSign(){
         $this::menuFooterLogo();
         $httpRequest = $this->getHttpRequest();
-        /** z bezpecnostnich důvodů neuvádím */
+        $ip = $httpRequest->getRemoteAddress();
+        $this->template->block = $this->articleModel->block($ip);
+        $this->template->ip = $ip;
+        $this->template->webtime = time();
     }
     /** Akce Odhlaseni */
     public function actionOut(): void
