@@ -1,4 +1,4 @@
-CRM pro BPR se snažím co mě čas dovolí, stavět co nejvíce odděleně, ale i tak je to málo :) motivovat kolegy a ano je v kódu použit český jazyk
+CRM pro BPR se snažím co mě čas dovolí, stavět co nejvíce odděleně, ale i tak je to málo :) motivovat kolegy (zatím pracuji na app sám) a ano je v kódu použit český jazyk
 
 Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/)
 
