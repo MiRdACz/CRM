@@ -45,7 +45,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     {
 	/* overeni prav */
 	if (!$this->getUser()->isAllowed('user')) {
-	    //throw new Nette\Application\ForbiddenRequestException;
+	    //new Nette\Application\ForbiddenRequestException;
 	    $this->redirect('Homepage:sign');exit;
        }
         /** Filter pro ceske mesice a utrzek z textu */
