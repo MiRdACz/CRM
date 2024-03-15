@@ -16,7 +16,6 @@ class EmailModel
     private $sslUser;
     private $sslPass;
     private $sslsec;
-    //navic pro databaze
     use Nette\SmartObject;
     /** @var Nette\Database\Explorer */
     private $database;
@@ -61,7 +60,7 @@ class EmailModel
             'predmet' => $this->subject,
         ];
 
-        $mail->setFrom('noreply@apartmany-bily-kostel.cz', 'Apartmány Bílý Kostel');
+        $mail->setFrom('', '');
         $mail->addTo($this->emailTo);
         $mail->setSubject($this->subject);
         $mail->setHtmlBody(
@@ -86,7 +85,7 @@ class EmailModel
             'predmet' => $this->subject,
         ];
 
-        $mail->setFrom('noreply@apartmany-bily-kostel.cz', 'Apartmány Bílý Kostel');
+        $mail->setFrom('', '');
         $mail->addTo($this->emailTo);
         $mail->setSubject($this->subject);
         $mail->setHtmlBody(
