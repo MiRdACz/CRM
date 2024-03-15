@@ -4,7 +4,7 @@ Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.ne
 
 Soubory kódů, co jsem nahrál obsahují ukázku routru, modelu, formulářů, presenteru, tak i šablonovacího souboru latte a composer.json, pro člověka, který nezná Nette, tak soubor index.php a Bootstrap.php, který spouští aplikaci, ale rozhodně pro pochopení je znalost Nette nebo Laravel celkem podstatná.
 
-Aplikace CRM je rozdělana do presentů podle divizí ( TravelPresenter.php apod. ), stejně tak jsou rozděleny modely ( TravelModel.php ) a samozřejmě templates jsou ve stejné logice.
+Aplikace CRM je rozdělana do presenterů podle divizí ( TravelPresenter.php apod. ), stejně tak jsou rozděleny modely ( TravelModel.php ) a samozřejmě templates jsou ve stejné logice.
 
 Popis architektura MVC
 
