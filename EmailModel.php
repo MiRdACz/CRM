@@ -91,7 +91,7 @@ class EmailModel
         $mail->setHtmlBody(
             $latte->renderToString(dirname(__DIR__) . '/Services/email.latte', $params),'./img/'
         );
-        $mailer = new Nette\Mail\SmtpMailer(['host' => $this->sslHost, //  pokud není nastaven, použijí se hodnoty z php.ini
+        $mailer = new Nette\Mail\SmtpMailer(['host' => $this->sslHost, 
             'username' => $this->sslUser,
             'password' => $this->sslPass,
             'secure' => $this->sslsec,]);
