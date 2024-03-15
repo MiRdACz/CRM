@@ -45,9 +45,8 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     {
 	/* overeni prav */
 	if (!$this->getUser()->isAllowed('user')) {
-	    //new Nette\Application\ForbiddenRequestException;
 	    $this->redirect('Homepage:sign');exit;
-       }
+        }
         /** Filter pro ceske mesice a utrzek z textu */
        $this->template->addFilter('czechMonth', new FactoryFilterMonth());
        $this->template->addFilter('snippetContent', new FactoryFilterSnippetContent());
