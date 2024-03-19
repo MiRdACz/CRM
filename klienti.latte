@@ -70,12 +70,11 @@
     <script n:nonce>
     var firma= document.getElementsByName("firma")[0];
     var kategorie= document.getElementsByName("categorie")[0];
-    firma.addEventListener("change", myScript);
-    kategorie.addEventListener("change", myScript);
-    function myScript() {
-      this.form.submit();
-    }
+    firma.addEventListener("change", subFrom);
+    kategorie.addEventListener("change", subFrom);
+        function subFrom() { this.form.submit(); }
+
     document.getElementById("search").addEventListener("input", whisperer);
-         function whisperer(){ var input = document.getElementById("search").value; naja.makeRequest('GET', {link whispererKlient!}, { value: input }); }
+        function whisperer(){ var input = document.getElementById("search").value; naja.makeRequest('GET', {link whispererKlient!}, { value: input }); }
     </script>
 {/block}
