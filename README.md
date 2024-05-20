@@ -9,6 +9,8 @@ Aplikace chce min. PHP 8.1 viz. composer.
 
 Z důvodu zveřejnění jedné vývojové větve a psaní opravdu v rychlosti, omluvte pracovní kódy. Nebudou Vám fungovat data u klientů ze sdílených disků apod. Není odladěné pro použití mimo firmu tedy ani pro lokální využití. 
 
+Stručné info
+------------
 Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/), má jeden placený zdroj a to API mapy Google.
 
 Soubory kódů, co jsem nahrál obsahují ukázku routru, modelu, formulářů, presenteru, tak i šablonovacího souboru latte a composer.json, pro člověka, který nezná Nette, tak soubor index.php a Bootstrap.php, který spouští aplikaci, ale rozhodně pro pochopení je znalost Nette nebo Laravel celkem podstatná.
