@@ -5,8 +5,9 @@ se snažím co mě čas dovolí (primární práce není programování), stavě
 [ZDE](https://github.com/MiRdACz/crm_bpr) je celá aplikace.
 
 Je třeba nastavit nette config a stáhnout si [tiny editor](https://www.tiny.cloud/) a [responsive manager](https://www.responsivefilemanager.com/) a vytvořit si db uživatele pro přihlášení.
+Aplikace chce min. PHP 8.1 viz. composer.
 
-Z důvodu zveřejnění jedné vývojové větve omluvte testovací kódy. Nebudou Vám fungovat data u klientů ze sdílených disků apod. Není odladěné mimo firmu, pro lokální využití. Aplikace chce min. PHP 8.1 viz. compouser.
+Z důvodu zveřejnění jedné vývojové větve omluvte testovací kódy. Nebudou Vám fungovat data u klientů ze sdílených disků apod. Není odladěné pro použití mimo firmu tedy ani pro lokální využití. 
 
 Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/), má jeden placený zdroj a to API mapy Google.
 
