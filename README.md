@@ -7,7 +7,7 @@ se snažím co mě čas dovolí (primární práce není programování), stavě
 Je třeba nastavit nette config a stáhnout si [tiny editor](https://www.tiny.cloud/) a [responsive manager](https://www.responsivefilemanager.com/) a vytvořit si db uživatele pro přihlášení.
 Aplikace chce min. PHP 8.1 viz. composer.
 
-Z důvodu zveřejnění jedné vývojové větve omluvte testovací kódy. Nebudou Vám fungovat data u klientů ze sdílených disků apod. Není odladěné pro použití mimo firmu tedy ani pro lokální využití. 
+Z důvodu zveřejnění jedné vývojové větve a psaní opravdu v rychlosti, omluvte pracovní kódy. Nebudou Vám fungovat data u klientů ze sdílených disků apod. Není odladěné pro použití mimo firmu tedy ani pro lokální využití. 
 
 Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/), má jeden placený zdroj a to API mapy Google.
 
