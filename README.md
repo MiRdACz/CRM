@@ -1,4 +1,4 @@
-CRM pro BPR se snažím co mě čas dovolí (primární práce není programování), stavět co nejvíce odděleně (db nejlépe pro každou divizy zvlášť), ale i tak je to málo :) motivovat kolegy (zatím app píši sám) a ano je v kódu použit český jazyk (jestli bude kolega, stojí za přepsání). V průběhu času nahraji komplet app i když bude pořád v testovací a vývojové fázy (app potřebuje alespoň minimální péči).
+CRM pro BPR se snažím co mě čas dovolí (primární práce není programování), stavět co nejvíce odděleně (db nejlépe pro každou divizy zvlášť), ale i tak je to málo :) motivovat kolegy (zatím app píši sám) a ano je v kódu použit český jazyk (jestli bude kolega, stojí za přepsání). ![ZDE]([https://github.com/MiRdACz/CRM/assets/9698726/42a25108-b7d0-45aa-bf34-9e2afb3178cf](https://github.com/MiRdACz/crm_bpr)) je aplikace.
 
 Aplikace je napsána v [Nette](https://nette.org/cs/) a [Latte](https://latte.nette.org/), má jeden placený zdroj a to API mapy Google.
 
