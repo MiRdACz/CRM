@@ -2,7 +2,7 @@ CRM pro BPR
 ===========
 se snažím co mě čas dovolí (primární práce není programování), stavět co nejvíce odděleně (db nejlépe pro každou divizy zvlášť), ale i tak je to málo :) motivovat kolegy (zatím app píši sám) a ano je v kódu použit český jazyk (jestli bude kolega, stojí za přepsání).
 
-[ZDE](https://github.com/MiRdACz/crm_bpr) je celá aplikace.
+[ZDE](https://github.com/MiRdACz/crm_bpr-main) je celá aplikace.
 
 Je třeba nastavit nette config a stáhnout si [tiny editor](https://www.tiny.cloud/) a [responsive manager](https://www.responsivefilemanager.com/) a nahrát do www/js/ a nezapomenout si vytvořit db uživatele pro přihlášení.
 Aplikace chce min. PHP 8.1 viz. composer.
